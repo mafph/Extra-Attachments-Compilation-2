@@ -151,6 +151,9 @@ self.wpn_fps_ass_asval.override = {
 self.parts.wpn_fps_upg_rpk_b_zastava.stats = {damage = 0, recoil = 1, spread = 1, concealment = -1}
 self.parts.wpn_fps_upg_rpk_b_zastava.override.wpn_fps_ak_extra_ris = {a_obj = "a_fl_eac"}
 table.insert(self.parts.wpn_fps_upg_rpk_b_zastava.forbids, "wpn_fps_upg_bp_lmg_lionbipod")
+-- Restore Zastava visuals (mesh + attach points) after cloning from ak105 for sound
+self.parts.wpn_fps_upg_rpk_b_zastava.unit = self.parts.wpn_fps_upg_ass_ak_b_zastava.unit
+self.parts.wpn_fps_upg_rpk_b_zastava.a_obj = self.parts.wpn_fps_upg_ass_ak_b_zastava.a_obj
 
 self.parts.wpn_fps_upg_rpk_b_ak105.stats = {damage = -5, recoil = -2, spread = -2, concealment = 4}
 self.parts.wpn_fps_upg_rpk_b_ak105.override.wpn_fps_ak_extra_ris = {a_obj = "a_fl_eac"}
