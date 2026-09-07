@@ -43,7 +43,6 @@ end
 
 self.wpn_fps_ass_amcar.override.wpn_fps_m4_upg_b_sd = {a_obj = "a_b_sd"}
 self.wpn_fps_ass_x_amcar.override.wpn_fps_m4_upg_b_sd = {a_obj = "a_b_sd"}
-self.wpn_fps_smg_x_olympic.override.wpn_fps_m4_upg_b_sd = {a_obj = "a_b_sd"}
 self.wpn_fps_smg_olympic.override.wpn_fps_m4_upg_b_sd = {a_obj = "a_b_sd"}
 self.wpn_fps_snp_tti.override.wpn_fps_snp_tti_vg_standard = {a_obj = "a_vg_vanilla"}
 -- Northstar
