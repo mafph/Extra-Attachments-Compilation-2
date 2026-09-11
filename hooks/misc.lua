@@ -233,6 +233,7 @@ local M4_ur = {
 "wpn_fps_upg_ass_m4_upper_reciever_ballos",
 "wpn_fps_m4_uupg_upper_radian"
 }
+
 for u, ur_id in ipairs(M4_ur) do self.wpn_fps_ass_tecci.adds[ur_id] = {"wpn_fps_smg_erma_extra_rail", "wpn_fps_amcar_bolt_standard"}
 	if self.parts[ur_id].override.wpn_fps_m4_uupg_draghandle then
 		self.parts[ur_id].override.wpn_fps_ass_tecci_dh_standard = deep_clone(self.parts[ur_id].override.wpn_fps_m4_uupg_draghandle)
@@ -241,13 +242,18 @@ for u, ur_id in ipairs(M4_ur) do self.wpn_fps_ass_tecci.adds[ur_id] = {"wpn_fps_
 	end
 end
 for w, mags in ipairs(m4_mags) do
-self.wpn_fps_ass_tecci.override[mags] = {
-	animations = {
-		reload_not_empty = "reload_not_empty",
-		reload = "reload"
+	local offset = -35
+	self.wpn_fps_ass_tecci.override[mags] = self.wpn_fps_ass_tecci.override[mags] or {}
+	self.wpn_fps_ass_tecci.override[mags].stats = deep_clone(self.parts[mags].stats)
+	if self.wpn_fps_ass_tecci.override[mags].stats.extra_ammo then self.wpn_fps_ass_tecci.override[mags].stats.extra_ammo = (self.parts[mags].stats.extra_ammo + offset) end
+	
+	self.wpn_fps_ass_tecci.override[mags].animations = {
+			reload_not_empty = "reload_not_empty",
+			reload = "reload"
 	}
-}
+	self.wpn_fps_ass_tecci.override[mags].stats.concealment = (self.wpn_fps_ass_tecci.override[mags].stats.concealment or 0) + 5
 end
+
 -- M4 FGs
 local smol_bd = {
 "wpn_fps_m16_fg_vietnam",
