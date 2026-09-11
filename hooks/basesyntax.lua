@@ -122,6 +122,7 @@ for i, part_ids in pairs(self.wpn_fps_ass_galil.uses_parts) do
 	end
 end
 
+--[[
 log("[EAC] Dumping lists:")
 log("[EAC] M4 foregrips:")
 for i, j in ipairs(EAC.m4_fg) do log(j) end
@@ -145,6 +146,7 @@ log("[EAC] Rifle sights:")
 for i, j in ipairs(EAC.ar_sights) do log(j) end
 log("[EAC] Rifle gadgets:")
 for i, j in ipairs(EAC.ar_gadgets) do log(j) end
+--]]
 -- Customs
 local custom_weapons = {
 "wpn_fps_smg_x_416",
