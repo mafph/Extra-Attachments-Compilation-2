@@ -241,6 +241,22 @@ for u, ur_id in ipairs(M4_ur) do self.wpn_fps_ass_tecci.adds[ur_id] = {"wpn_fps_
 		self.parts[ur_id].override.wpn_fps_snp_victor_bolt_standard = deep_clone(self.parts[ur_id].override.wpn_fps_amcar_bolt_standard)
 	end
 end
+
+local function dump_table(tbl, label)
+    if not tbl then
+        log("[dump] " .. label .. " ist nil")
+        return
+    end
+    log("[dump] --- " .. label .. " ---")
+    for k, v in pairs(tbl) do
+        if type(v) == "table" then
+            log("[dump]   " .. tostring(k) .. " = <table>")
+        else
+            log("[dump]   " .. tostring(k) .. " = " .. tostring(v))
+        end
+    end
+end
+
 for w, mags in ipairs(m4_mags) do
 	local offset = -35
 	self.wpn_fps_ass_tecci.override[mags] = self.wpn_fps_ass_tecci.override[mags] or {}
@@ -251,6 +267,17 @@ for w, mags in ipairs(m4_mags) do
 			reload_not_empty = "reload_not_empty",
 			reload = "reload"
 	}
+	
+	--[[
+	local override = self.wpn_fps_ass_tecci.override and self.wpn_fps_ass_tecci.override[mags]
+    if override and override.stats then
+        dump_table(override.stats, "tecci override[" .. mags .. "].stats")
+    else
+        log("[dump] " .. mags .. ": kein override.stats vorhanden")
+    end
+	
+	--]]
+	
 	self.wpn_fps_ass_tecci.override[mags].stats.concealment = (self.wpn_fps_ass_tecci.override[mags].stats.concealment or 0) + 5
 
 	self.wpn_fps_ass_famas.override[mags] = {
