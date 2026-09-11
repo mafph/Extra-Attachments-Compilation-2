@@ -50,6 +50,7 @@ local CAP = {
 "rpk",
 "saiga",
 "shepheard",
+"sub2000",
 "sr2",
 "s552",
 "tti",
@@ -94,12 +95,179 @@ local CAP = {
 "victor",
 "qbu88",
 "new_m14",
-"hk21"
+"hk21",
+"ching",
+"asval",
+"tkb",
+"par",
+"kacchainsaw",
+"mg42",
+"cobray",
+"fmg9",
+"scorpion",
+"speen",
+"tec9",
+"benelli",
+"ksg",
+"aa12",
+"striker"
 }
 for i, weapon_id in ipairs(CAP) do
 	if not self[weapon_id] then self[weapon_id] = {} end
 	if not self[weapon_id].attachment_points then self[weapon_id].attachment_points = {} end
 end
+table.list_append(self.sub2000.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 17, -3.8),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.ching.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 16, -3.8),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.asval.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 25, -2.6),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.tkb.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_g",
+			position = Vector3(2.5, 2.5, 2.2),
+			rotation = Rotation(0, 0, 0)
+			--position = Vector3(3.1, 2.5, 2.8),
+			--rotation = Rotation(0, 0, -45)
+		}})
+table.list_append(self.par.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, 4, -5.8),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.m60.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 35, 1.7),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.kacchainsaw.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 57, -6.1),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.mg42.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, 20, -3.8),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.hk21.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 20, -3.8),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.cobray.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 17, -3.8),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.fmg9.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 14, 0.7),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.pm9.attachment_points, {
+		{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, 7, -3.2),
+			rotation = Rotation(0, 0, 0)
+		},
+		{
+			name = "a_vg_rail", 
+			base_a_obj = "a_b", 
+			position = Vector3( 0, -1.5, -3.2 ), 
+			rotation = Rotation( 180, 0, 90 ) 
+		}})
+table.list_append(self.scorpion.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, 2.6, -2.7),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.speen.attachment_points, {
+		{
+			name = "a_vg",
+			base_a_obj = "a_lower",
+			position = Vector3(0, 37.5, 3.4),
+			rotation = Rotation(0, 0, 0)
+		},
+		{
+			name = "a_vg_rail", 
+			base_a_obj = "a_lower", 
+			position = Vector3( 0, 30, 3.4 ), 
+			rotation = Rotation( 180, 0, 90 ) 
+		}})
+table.list_append(self.tec9.attachment_points, {
+		{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, 22, 5.1),
+			rotation = Rotation(0, 0, 0)
+		},
+		{
+			name = "a_vg_rail", 
+			base_a_obj = "a_b", 
+			position = Vector3( 0, 14, 5.1 ), 
+			rotation = Rotation( 180, 0, 90 ) 
+		}
+		})
+table.list_append(self.benelli.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 17, -2.6),
+			rotation = Rotation(0, 0, 0)
+		},
+		{
+			name = "a_vg_rail", 
+			base_a_obj = "a_fg", 
+			position = Vector3( 0, 10, -2.6 ), 
+			rotation = Rotation( 180, 0, 90 ) 
+		}
+		})
+table.list_append(self.ksg.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_fg",
+			position = Vector3(0, 4, -2.4),
+			rotation = Rotation(0, 0, 0)
+		}})
+table.list_append(self.aa12.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, -6.5, -2.6),
+			rotation = Rotation(0, 0, 0)
+		},
+		{
+			name = "a_vg_rail", 
+			base_a_obj = "a_b", 
+			position = Vector3( 0, -15, -2.6 ), 
+			rotation = Rotation( 180, 0, 90 ) 
+		}
+		})
+table.list_append(self.striker.attachment_points, {{
+			name = "a_vg",
+			base_a_obj = "a_b",
+			position = Vector3(0, 13.5, -1.3),
+			rotation = Rotation(0, 0, 0)
+		}})
 table.list_append(self.amcar.attachment_points, {{
 			name = "a_b_sd", 
 			base_a_obj = "a_b", 
@@ -540,8 +708,8 @@ table.list_append(self.famas.attachment_points, {{
 		},
 		{
 			name = "a_m_m4",
-			base_a_obj = "a_m",    
-			position = Vector3(0, 0, 6),
+			base_a_obj = "a_m",              -- ANPASSEN falls FAMAS anders heisst - bitte verifizieren!
+			position = Vector3(0, 0, 6),    -- Platzhalter, Richtung/Betrag noch unbekannt
 			rotation = Rotation(0, 0, 0)
 		}
 	})	

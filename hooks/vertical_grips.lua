@@ -52,6 +52,25 @@ local add_vg = {
 	"wpn_fps_ass_scar",
 	"wpn_fps_ass_komodo",
 	"wpn_fps_ass_vhs",
+	"wpn_fps_ass_sub2000",
+	"wpn_fps_ass_ching",
+	"wpn_fps_ass_asval",
+	"wpn_fps_ass_tkb",
+	"wpn_fps_lmg_par",
+	"wpn_fps_lmg_m60",
+	"wpn_fps_lmg_kacchainsaw",
+	"wpn_fps_lmg_mg42",
+	"wpn_fps_lmg_hk21",
+	"wpn_fps_smg_cobray",
+	"wpn_fps_smg_fmg9",
+	"wpn_fps_smg_pm9",
+	"wpn_fps_smg_scorpion",
+	"wpn_fps_smg_speen",
+	"wpn_fps_smg_tec9",
+	"wpn_fps_sho_ben",
+	"wpn_fps_sho_ksg",
+	"wpn_fps_sho_aa12",
+	"wpn_fps_sho_striker",
 	"wpn_fps_sho_basset",
 	"wpn_fps_sho_x_basset",
 	"wpn_fps_shot_saiga",
@@ -186,7 +205,12 @@ local vg_rail_wpns = {
 	"wpn_fps_lmg_hcar",
 	"wpn_fps_lmg_m249",
 	"wpn_fps_snp_qbu88",
-	"wpn_fps_ass_m14"
+	"wpn_fps_ass_m14",
+	"wpn_fps_smg_pm9",
+	"wpn_fps_smg_speen",
+	"wpn_fps_smg_tec9",
+	"wpn_fps_sho_ben",
+	"wpn_fps_sho_aa12"
 }
 for i, wpn_id in ipairs(vg_rail_wpns) do
 	self[wpn_id].override.wpn_fps_shot_r870_gadget_rail = {a_obj = "a_vg_rail"}
@@ -256,11 +280,21 @@ for _, vg_forbid in pairs(vg_ids) do
 		table.list_append(self.parts[fg_forbid].forbids, { vg_forbid })
 	end
 end
+
 self.parts.wpn_fps_upg_vg_none.forbids         = {"wpn_fps_upg_vg_ass_smg_verticalgrip"}
+
 for _, part_id in pairs(vg_ids) do
 	self.parts[part_id].override.wpn_fps_smg_thompson_foregrip = {unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"}
 	self.wpn_fps_smg_sr2.override[part_id] = {a_obj = "a_vg_2"}
 end
+
+--[[
+for _, part_id in pairs(vg_ids) do
+	if not self.parts[part_id].override then self.parts[part_id].override = {} end
+	self.parts[part_id].override.wpn_fps_sho_ksg_fg_standard = {unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"}
+end
+]]
+
 -- RPK
 self.wpn_fps_lmg_rpk.override.wpn_fps_upg_fg_midwest = {adds = {"wpn_fps_upg_vg_ass_smg_verticalgrip" }}
 self.wpn_fps_lmg_rpk.override.wpn_fps_upg_ak_fg_tapco = {adds = {"wpn_fps_upg_vg_ass_smg_verticalgrip" }}

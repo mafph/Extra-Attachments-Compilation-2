@@ -1,49 +1,49 @@
 Hooks:PostHook(WeaponFactoryTweakData, "init", "EAC_animations", function(self)
 
-local scar_offset      = Vector3(0, 0, -1.75)
-local komodo_offset    = Vector3(0, 0, -6.6)
-local amcar_offset     = Vector3(-0.02, 0, -0.25)
-local m4_offset        = Vector3(0, 0, 0.2)
-local m16_offset       = Vector3(0, 0, -0.27)
-local olympic_offset   = Vector3(-0.005, 0, -3.32)
-local ak74_offset        = Vector3(0.05, 0, -0.35)
-local akm_offset       = Vector3(0.05, 0, -0.35)
-local akm_gold_offset  = Vector3(0.05, 0, -0.35)
-local akmsu_offset     = Vector3(0, 0, -0.42)   
-local saiga_offset     = Vector3(0, 0, -0.35)   
-local ak5_offset       = Vector3(0, 0, 1.06)
-local g36_offset       = Vector3(0, 0, 0.05)
-local mp5_offset       = Vector3(0, 0, -1.75)
-local s552_offset      = Vector3(0.045, 0, 2.27)
-local g3_offset        = Vector3(0.0, 6, -1.72) 
-local galil_offset     = Vector3(0, 0, -1.5)    
-local fal_offset       = Vector3(0, 0, 2.625)
-local tti_offset       = Vector3(0, 0, -0.3)
-local flint_offset     = Vector3(0, 2, -1.88)   
-local mac10_offset     = Vector3(0, 0, -1.65)
-local basset_offset    = Vector3(0.01, 0, 2.1)
-local vhs_offset       = Vector3(0, 0, 1.38)
-local famas_offset     = Vector3(0, 0, 2.25)
-local shepheard_offset = Vector3(0, 0, -3.29)
-local vityaz_offset    = Vector3(0, 0, 1.25)
-local hk51b_offset     = Vector3(0, 0, 0)
-local hcar_offset      = Vector3(4.9, 10, -3.8)
-local sko12_offset     = Vector3(0, 0, -3.23341)
-local m249_offset      = Vector3(2.279, -9.74, -1.626)
-local qbu_offset	   = Vector3(0, 19, -0.9)
-local m14_offset	   = Vector3(0, 11, -3)
-local l85a2_offset     = Vector3(0, 0, -1.38)
-local aug_offset       = Vector3(-0.03, 0, 4.36)
-local rota_offset      = Vector3(0, 0, 1.05)
-local schakal_offset   = Vector3(-0.01, 0, 0.45)
-local hajk_offset      = Vector3(-0.01, 0, -2.65)
-local tecci_offset     = Vector3(0.0, -3, -1.15)	
-local shak12_offset     = Vector3(0.0, 4, 0.79026)	
+local scar_offset		= Vector3(0, 0, -1.75)
+local komodo_offset		= Vector3(0, 0, -6.6)
+local amcar_offset		= Vector3(-0.02, 0, -0.25)
+local m4_offset			= Vector3(0, 0, 0.2)
+local m16_offset		= Vector3(0, 0, -0.27)
+local olympic_offset	= Vector3(-0.005, 0, -3.32)
+local ak74_offset		= Vector3(0.05, 0, -0.35)
+local akm_offset		= Vector3(0.05, 0, -0.35)
+local akm_gold_offset	= Vector3(0.05, 0, -0.35)
+local akmsu_offset		= Vector3(0, 0, -0.42)   
+local saiga_offset		= Vector3(0, 0, -0.35)   
+local ak5_offset		= Vector3(0, 0, 1.06)
+local g36_offset		= Vector3(0, 0, 0.05)
+local mp5_offset		= Vector3(0, 0, -1.75)
+local s552_offset		= Vector3(0.045, 0, 2.27)
+local g3_offset			= Vector3(0.0, 6, -1.72) 
+local galil_offset		= Vector3(0, 0, -1.5)    
+local fal_offset		= Vector3(0, 0, 2.625)
+local tti_offset		= Vector3(0, 0, -0.3)
+local flint_offset		= Vector3(0, 2, -1.88)   
+local mac10_offset		= Vector3(0, 0, -1.65)
+local basset_offset		= Vector3(0.01, 0, 2.1)
+local vhs_offset		= Vector3(0, 0, 1.38)
+local famas_offset		= Vector3(0, 0, 2.25)
+local shepheard_offset	= Vector3(0, 0, -3.29)
+local vityaz_offset		= Vector3(0, 0, 1.25)
+local hk51b_offset		= Vector3(0, 0, 0)
+local hcar_offset		= Vector3(4.9, 10, -3.8)
+local sko12_offset		= Vector3(0, 0, -3.23341)
+local m249_offset		= Vector3(2.279, -9.74, -1.626)
+local qbu_offset		= Vector3(0, 19, -0.9)
+local m14_offset		= Vector3(0, 11, -3)
+local l85a2_offset		= Vector3(0, 0, -1.38)
+local aug_offset		= Vector3(-0.03, 0, 4.36)
+local rota_offset		= Vector3(0, 0, 1.05)
+local schakal_offset	= Vector3(-0.01, 0, 0.45)
+local hajk_offset		= Vector3(-0.01, 0, -2.65)
+local tecci_offset		= Vector3(0.0, -3, -1.15)	
+local shak12_offset		= Vector3(0.0, 4, 0.79026)	
 
 local specter_pb_offset = Vector3(0,0,-3.1)
-local cs_offset = Vector3(0,0,-3.2)
-local atibal_offset = Vector3(0,0,-6.15)
-local hamr_offset = Vector3(0,0,-3.65)
+local cs_offset 		= Vector3(0,0,-3.2)
+local atibal_offset 	= Vector3(0,0,-6.15)
+local hamr_offset 		= Vector3(0,0,-3.65)
 -- Shared Vertical Grips
 local p_eff = {
 	"wpn_fps_upg_vg_verticalgrip",
@@ -93,6 +93,21 @@ for i, part_id in ipairs(p_eff) do
 	self.wpn_fps_snp_qbu88.override[part_id] 	 = {override_weapon = {weapon_hold = "hajk"	  , use_stance = "hajk"   }}
 	self.wpn_fps_ass_m14.override[part_id]  	 = {override_weapon = {weapon_hold = "rpk", use_stance = "rpk"}}
 	
+	self.wpn_fps_ass_sub2000.override[part_id]	 = {override_weapon = {weapon_hold = "mp9"}} -- Cavity / short
+	self.wpn_fps_ass_ching.override[part_id] 	 = {override_weapon = {weapon_hold = "hajk"}} -- Galant / short
+	self.wpn_fps_ass_asval.override[part_id] 	 = {override_weapon = {weapon_hold = "schakal"}} -- Valkyria / short 
+	self.wpn_fps_lmg_par.override[part_id]		 = {override_weapon = {weapon_hold = "hk21"}} -- KSP58 / left
+	self.wpn_fps_lmg_m60.override[part_id] 		 = {override_weapon = {weapon_hold = "hk21"}} -- M60 / misaligned
+	self.wpn_fps_lmg_kacchainsaw.override[part_id] = {override_weapon = {weapon_hold = "hk21"}} -- Campbell / ???
+	self.wpn_fps_lmg_mg42.override[part_id] 	 = {override_weapon = {weapon_hold = "hk21"}} -- Buzzsaw / left
+	self.wpn_fps_smg_fmg9.override[part_id] 	 = {override_weapon = {weapon_hold = "mp9"}} -- Wasp / short
+	self.wpn_fps_smg_pm9.override[part_id] 		 = {override_weapon = {weapon_hold = "mp9"}} -- Miyaka / misaligned
+	self.wpn_fps_smg_scorpion.override[part_id]  = {override_weapon = {weapon_hold = "schakal"}} -- Cobra / long
+	self.wpn_fps_smg_speen.override[part_id] 	 = {override_weapon = {weapon_hold = "mp9"}} -- Ballerina / way short
+	self.wpn_fps_smg_tec9.override[part_id] 	 = {override_weapon = {weapon_hold = "mp9"}} -- Blaster
+	self.wpn_fps_sho_ben.override[part_id] 		 = {override_weapon = {weapon_hold = "l85a2"}} -- M1014 / short
+	self.wpn_fps_sho_aa12.override[part_id] 	 = {override_weapon = {weapon_hold = "rpk"}} -- Steakout / good
+
 	self.parts[part_id].override.wpn_fps_upg_o_specter_piggyback = {
 		stance_mod = {
 			wpn_fps_ass_scar      = {translation = deep_clone(self.parts.wpn_fps_upg_o_specter_piggyback.stance_mod.wpn_fps_smg_hajk.translation) - scar_offset         },
@@ -343,6 +358,7 @@ self.parts.wpn_fps_upg_vg_adjust.stance_mod = {
 		wpn_fps_snp_qbu88   	= {translation = Vector3(0, 19, -0.9)},
 		wpn_fps_lmg_m249    	= {translation = Vector3(2.279, -9.74, -1.626), rotation = Rotation(0.108, -0.372, 0.629)},
 		wpn_fps_ass_m14    		= {translation = Vector3(0, 11, -0.435)},
+		wpn_fps_smg_tec9		= {translation = Vector3(0, 0, 0)},
 	-- VG removed
 		wpn_fps_ass_l85a2       = {translation = Vector3(0, 0, -1.38)},
 		wpn_fps_ass_aug         = {translation = Vector3(-0.03, 0, 4.36)},
